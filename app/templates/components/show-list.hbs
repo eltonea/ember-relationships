@@ -1,0 +1,11 @@
+<h2>Companies</h2>
+{{#each data as |obj|}}
+  <h3>Name: {{obj.name}}</h3>
+  <h3>Address: {{obj.address.name}}</h3>
+  {{#if obj.contacts}}
+    <h3>Contacts:</h3>
+  {{/if}}
+  {{#each obj.contacts as |contact|}}
+    <h3 style="margin-left: 1.2em">{{contact.name}}</h3>
+  {{/each}} 
+{{/each}}
